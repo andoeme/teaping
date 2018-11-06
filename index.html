@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>teaping - Donate Money As You Go</title>
+    <title>teaping - Do Good As You Go</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -21,19 +21,22 @@
 
 <style type="text/css">
 
-    .jumbotron {
-        background: url("img/childbackground.jpg");
+    .jumbotron {        
         margin: 0 auto;
-        background-size: cover;
         text-align: center;
         border-radius: 0;
     }
 
-    .jumbotron .container {
+    .teaser {
+        background: url("img/danurwendho-adyakusuma-20997-unsplash.jpg");        
+        background-size: cover;
+    }
+
+    .teaser .container {
         background: rgba(255,255,255,1);
         padding: 5vh;
-        width: 50vw;
-        margin: 0 0 0 45vw;
+        width: 90vw;
+        margin: 0 0 0 0;
         border-radius: 5px;
     }
 
@@ -56,13 +59,86 @@
         margin: 20vh 0 20vh 0;
     }
 
+    .card {
+        border: 0;
+        margin: 0 auto;
+        width: 23vw;
+        text-align: center;
+
+    }
+
+    .card img {
+        width: 10vw;
+        margin: 0 auto;
+    }
+
+    #firstcard{
+        padding: 0;
+        
+        margin-left: 10vw;
+    }
+
+    .center {
+        margin-left: 20%w;
+    }
+
+    #information {
+        width: 75vw;
+        margin: 0 auto;
+    }
+
+    .app {
+        background: #5cb85c;
+        background: url("img/danurwendho-adyakusuma-20997-unsplash_bg.jpg");
+        background-size: cover;
+        color: #000;
+        text-align: center;
+    }
+
+    .app .container {
+        background: rgba(255,255,255,1);
+        padding: 5vh;
+        width: 90vw;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
+    .app p {
+        text-align: center;
+    }
+
+
+
+    @media all AND (min-width: 400px) {
+        .jumbotron .container {
+            width:75vw;
+        }
+    }
+
+    @media all AND (min-width: 550px) {
+        .jumbotron .container {
+            width:65vw;
+        }
+    }
+
+    @media all AND (min-width: 900px) {
+        .teaser {
+            background: url(img/danurwendho-adyakusuma-20997-unsplash_lg.jpg);
+            background-size: cover;
+        }
+
+        .jumbotron .container {
+            width: 45vw;
+        }
+    }
+
 </style>
 
   </head>
   <body>
       <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand font-weight-bold text-success" href="#"><img src="img/logo_v1.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <a class="navbar-brand font-weight-bold text-success" href="#"><img src="img/logo_new_cord.png" width="30" height="30" class="d-inline-block align-top" alt="">
                         teaping</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -80,10 +156,54 @@
                           <a class="nav-link" href="#">Contact</a>
                         </li>
                       </ul>
+                      <a class="pr-4 text-success" data-toggle="modal" data-target="#exampleModalCenter">Not yet a member? Register now</a>
+
+                      <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Register Now</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="form-group">
+                  <label for="name">Your Name</label>
+                  <input class="form-control" type="text" id="name">
+                  <label for="email">Your Email</label>
+                  <input class="form-control" type="email" id="email">
+                  <label for="password">Your Password</label>
+                  <input class="form-control" type="password" id="password">
+                  <label for="donatororinstitution">You sign up as a</label><br>
+                  <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="donatororinstitution" id="donatororinstitution" value="donator" checked>
+                        <label class="form-check-label" for="donatororinstitution">
+                          Donator
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="donatororinstitution" id="donatororinstitution" value="institution">
+                        <label class="form-check-label" for="donatororinstitution">
+                          Institution
+                        </label>
+                    </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <input type="button" class="btn btn-success" value="Sign Up" onclick="window.location.href='donator.html'">
+                        </div>
+          </div>
+        </div>
+      </div>
+
                       <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="email" placeholder="Your Email" aria-label="email">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up For Our Newsletter</button>
-                      </form>
+                        <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="email">
+                        <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="password">
+                        <input class="btn btn-outline-success my-2 my-sm-0" type="button" value="Login" onclick="window.location.href='institution.html'">
+                    </form>
                     </div>
                   </nav>
       </header>
@@ -92,11 +212,10 @@
 
         <section>
 
-        <div class="jumbotron">
+        <div class="jumbotron teaser">
                 <div class="container">
                     <h1 class="display-4">Do Good As You Go</h1>
-                    <p class="lead">A coffee to go, the theater ticket... all adds up to you being good on the go.
-                    <span class="text-success font-weight-bold">teaping</span> transfers a tiny part of your pay to help those who need it.</p>
+                    <p class="lead">Imagine you enjoy your favorite tea. What if you could share your gratidute with local farmers on the other side of the globe? Let's tip them via <span class="text-success font-weight-bold">teaping</span>, a blockchain based service connecting consumers to local producers.</p>
                     <br>
                     <form class="form-group">
                         <input type="submit" class="btn btn-success" href="#" role="button" value="Learn more">
@@ -104,48 +223,76 @@
                 </div>        
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1495556650867-99590cea3657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjF9&s=413cc9699e1c5cf24a3bc559e25e4004&auto=format&fit=crop&w=1950&q=80" alt="Card image cap">
+        </section>
+
+        <section>
+
+    <div class="row" style="margin-top: 15vh; margin-bottom: 10vh;">
+            <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/tea-party.png" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title text-uppercase text-success">Tea Enthusiast</h5>
                 </div>
+              </div>
             </div>
-            </div>
-            <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1532372722026-28ddb1b48daf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=553bcea2e8519ab05e6df5080c3b01c4&auto=format&fit=crop&w=1950&q=80" alt="Card image cap">
+            <div class="col-sm-4">
+              <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/bitcoin.png" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title text-uppercase text-success">Micro Payments</h5>
                 </div>
+              </div>
             </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="col-sm-4" style="width: 18rem;">
+                    <div class="card">
+                            <img class="card-img-top" src="img/farmer.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title text-uppercase text-success">Local Tea Farmer</h5>
+                      </div>
                     </div>
-                </div> 
-            </div>  
-            </div> 
-        </div>
+                  </div>
+          </div>            
 
-        <div class="container">
-            <h1>How Your Help Helps</h1>
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b73302ddf5fabf9285df2da9c462efbb&auto=format&fit=crop&w=1950&q=80" width="300px">
-        </div>
+        </section>
 
+    <section>
+        <div class="jumbotron">
+        <div class="container align-middle" id="information">
+                <h2 class="display-4 text-center">OUR CONCERNS</h2>
+                <p>Amrita is a woman living close to the Darjeeling hills. 
+                    She is working in a tea plantation earning almost 2 $ a day for this back breaking job. 
+                    She lives in a slum under unhygienic conditions and has no healthcare or education. 
+                    We pay a lot of money for the amazing tea that we drink even if the actual person picking it gets almost nothing.</p>
+            <br>
+           <br>
+                    <h2 class="display-4">OUR SOLUTION</h2>
+                    <p><span class="font-weight-bold text-success">teaping</span> provides transactions of micro payments from tea enthusiasts to local tea farmers. 
+                        You can show your appreciation for the hard work they put into your product. 
+                        Just sign up into the platform and send an amount into a blockchain wallet and our service shares this money fairly and evenly between them. 
+                        With the help of the blockchain technology and the support of the local cooperative we can connect two sides of this line.</p>
+        </div>
+    </div>
+
+    </section>
+
+    <section>
+        <div class="jumbotron app">
+            <div class="container">
+                <h1 class="display-4">Get The App Now!</h1>
+                <p class="lead">Do good on the go using your iPhone. Download the app now for free.</p>
+                    <img src="img/teaping_app.gif" alt="Teaping App Teaser Gif" width="50%" class="mx-auto pt-2 pb-2"><br>
+                <a href="#"><img src="img/appstore.png" width="200px" alt="Download teaping on the App Store"></a>
+            </div>
+        </div>
     </section>
 
         
     </main>
 
-    <footer>
+    <footer class="bg-light">
 
-
+        <p class="text-center lead pt-2">&copy; 2018 <span class="text-success font-weight-bold">teaping</span></p>
 
     </footer>
 
@@ -156,25 +303,9 @@
 
     <script type="text/javascript">
     
-    var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
         
     </script>
   </body>
